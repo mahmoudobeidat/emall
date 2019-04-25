@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['admin_id'])){
+    header("location:login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -185,6 +192,18 @@
                         <li>
                             <a href="manage_admin.php">
                                 <i class="fas fa-chart-bar"></i>Manage Admin</a>
+                        </li>
+                        <li>
+                            <a href="manage_category.php">
+                                <i class="fas fa-chart-bar"></i>Manage Category</a>
+                        </li>
+                        <li>
+                            <a href="manage_product.php">
+                                <i class="fas fa-chart-bar"></i>Manage Product</a>
+                        </li>
+                        <li>
+                            <a href="logout.php">
+                                <i class="fas fa-chart-bar"></i>Logout</a>
                         </li>
                         <li>
                             <a href="chart.html">
@@ -429,7 +448,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="logout.php">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
